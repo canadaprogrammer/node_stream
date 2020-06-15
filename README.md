@@ -48,3 +48,26 @@ Transform stream transforms from writable stream to readable stream
 ### Using pipe
 
 - `$ echo Hello World! | node replace World Node.js`
+
+## Async by using Stream
+
+### Sequential Execution
+
+- concat `file1.txt` and `file2.txt` to `allTogether.txt`
+- `$ node concat allTogether.txt file1.txt file2.txt`
+
+### Parallel Execution
+
+- check Urls on `urlList.txt` and then print the results on `resultsOfCheckUrls.txt`
+- use `paralleStream.js` on `checkUrls.js`
+- `$ node checkUrls urlList.txt`
+
+### Limited Parallel Execution
+
+- use `limitedParallelStream.js` on `checkUrls.js`
+- `$ node checkUrls urlList.txt`
+
+### Sequential Limited Parallel Execution
+
+- use `through2-parallel` on `sequentialParallelStream.js`
+- `$ node sequentialParallelStream urlList.txt`
